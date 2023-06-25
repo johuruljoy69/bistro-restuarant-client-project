@@ -17,21 +17,21 @@ const DashBoard = () => {
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col items-center justify-center">
                 <Outlet></Outlet>
-                <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>    
+                <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
             </div>
             <div className="drawer-side bg-[#D1A054]  ">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80">
                     {
                         isAdmin ? <>
-                            <li> <NavLink to="/dashboard/home" ><FaHome /> Admin Home </NavLink> </li>
-                            <li> <NavLink to="/dashboard/items" ><FaUtensils /> Add Items </NavLink> </li>
-                            <li> <NavLink to="/dashboard/manage" ><FaWallet /> Manage Items </NavLink> </li>
+                            <li> <NavLink to="/dashboard/adminhome" ><FaHome /> Admin Home </NavLink> </li>
+                            <li> <NavLink to="/dashboard/additem" ><FaUtensils /> Add Items </NavLink> </li>
+                            <li> <NavLink to="/dashboard/manageitems" ><FaWallet /> Manage Items </NavLink> </li>
                             <li> <NavLink to="/dashboard/bookings" ><FaBook /> Manage Bookings </NavLink> </li>
                             <li> <NavLink to="/dashboard/allusers" ><FaUsers /> All Users </NavLink> </li>                           
 
                         </> : <>
-                            <li> <NavLink to="/dashboard/home" ><FaHome /> User Home </NavLink> </li>
+                            <li> <NavLink to="/dashboard/userhome" ><FaHome /> User Home </NavLink> </li>
                             <li> <NavLink to="/dashboard/reservation" ><FaCalendar /> Reservations </NavLink> </li>
                             <li> <NavLink to="/dashboard/history" ><FaWallet /> Payment History </NavLink> </li>
                             <li> <NavLink to="/dashboard/mycart" ><FaShoppingCart /> My Cart <span className="badge badge-secondary"> +{cart?.length || 0} </span> </NavLink> </li>
